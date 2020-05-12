@@ -17,9 +17,9 @@ namespace PalTrackerTests
         [Fact]
         public void Create()
         {
-            var expected = new TimeEntry(1, 222, 333, new DateTime(2008, 08, 01, 12, 00, 01), 24);
+            var expected = new TimeEntry(1, 222, 333, new DateTime(2020, 01, 01, 00, 00, 00), 24);
 
-            var created = _repository.Create(new TimeEntry(222, 333, new DateTime(2008, 08, 01, 12, 00, 01), 24));
+            var created = _repository.Create(new TimeEntry(222, 333, new DateTime(2020, 01, 01, 00, 00, 00), 24));
 
             Assert.Equal(expected, created);
             Assert.Equal(expected, _repository.Find(1));
